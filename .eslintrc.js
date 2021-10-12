@@ -6,6 +6,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'airbnb/hooks',
     'prettier'
   ],
   parser: '@typescript-eslint/parser',
@@ -21,6 +22,12 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    "react-hooks/rules-of-hooks": [
+      "error"
+    ],
+    "react-hooks/exhaustive-deps": [
+      "error"
+    ],
     'import/extensions': [
       'error',
       {
@@ -36,9 +43,24 @@ module.exports = {
         extensions: ['.jsx', '.tsx'],
       }
     ],
+    'no-void': [
+      'error',
+      {
+        allowAsStatement: true,
+      }
+    ],
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
     'react/react-in-jsx-scope': 'off',
+    'import/no-default-export': 'error',
+    'import/prefer-default-export': 'off',
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
+    'no-underscore-dangle': 'off',
+    'react/prop-types': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/no-array-index-key': 'off',
+    'no-new-func': 'off'
   },
   settings: {
     'import/resolver': {
